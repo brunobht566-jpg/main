@@ -149,15 +149,47 @@ header {
   height: 100%;
   background-color: rgba(0,0,0,0.9);
   cursor: zoom-out;
+  overflow: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .modal-content {
   margin: auto;
   display: block;
-  width: 75%;
-  max-width: 800px;
+  width: 90%;
+  max-width: 900px;
+  height: auto;
+  max-height: 85vh;
   border-radius: 10px;
   animation: zoom 0.3s;
+  object-fit: contain;
+}
+
+/* Celulares - ajusta para ocupar mais espaço */
+@media (max-width: 768px) {
+  .modal {
+    padding-top: 30px;
+  }
+
+  .modal-content {
+    width: 95%;
+    max-height: 80vh;
+  }
+}
+
+/* Celulares pequenos */
+@media (max-width: 480px) {
+  .modal {
+    padding-top: 20px;
+  }
+
+  .modal-content {
+    width: 100%;
+    max-height: 75vh;
+    padding: 0 10px;
+  }
 }
 
 @keyframes zoom {
