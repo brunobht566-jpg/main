@@ -138,26 +138,26 @@ document.addEventListener('DOMContentLoaded', () => {
 			}
 		});
 
-		// // Fecha o modal ao clicar no 'X'
-		// if (closeBtn) {
-		// 	closeBtn.onclick = function() {
-		// 		// remove iframe if exists
-		// 		const oldIframe = document.getElementById('imgExpandedIframe');
-		// 		if (oldIframe) oldIframe.remove();
-		// 		modal.style.display = "none";
-		// 		modalImg.style.display = 'block';
-		// 	}
-		// }
+		// Fecha o modal ao clicar no 'X'
+		if (closeBtn) {
+			closeBtn.onclick = function() {
+				// remove iframe if exists
+				const oldIframe = document.getElementById('imgExpandedIframe');
+				if (oldIframe) oldIframe.remove();
+				modal.style.display = "none";
+				modalImg.style.display = 'block';
+			}
+		}
 
 		// Fecha o modal ao clicar em qualquer lugar fora da imagem
-		// modal.onclick = function(event) {
-		// 	if (event.target !== modalImg) {
-		// 		const oldIframe = document.getElementById('imgExpandedIframe');
-		// 		if (oldIframe) oldIframe.remove();
-		// 		modal.style.display = "none";
-		// 		modalImg.style.display = 'block';
-		// 	}
-		// }
+		modal.onclick = function(event) {
+			if (event.target !== modalImg) {
+				const oldIframe = document.getElementById('imgExpandedIframe');
+				if (oldIframe) oldIframe.remove();
+				modal.style.display = "none";
+				modalImg.style.display = 'block';
+			}
+		}
 
 		// Fecha o modal ao pressionar ESC
 		document.onkeydown = function(event) {
