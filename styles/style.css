@@ -41,6 +41,12 @@ header {
   border-radius: 50%;
 }
 
+.header-item a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
 .header-item:hover {
   transform: scale(1.05);
   opacity: 0.9;
